@@ -11,6 +11,7 @@ body {
 }
 
 .dateContainer {
+    padding: 10px 10px 10px 50px;
     display: flex;
     flex-direction: column;
     border: none;
@@ -22,6 +23,7 @@ body {
 }
 
 .conceptsCoveredContainer {
+    padding: 10px 10px 10px 50px;
     display: flex;
     flex-direction: column;
     border: none;
@@ -32,6 +34,7 @@ body {
 }
 
 .journalEntryContainer {
+    padding: 10px 10px 10px 50px;
     display: flex;
     flex-direction: column;
     border: none;
@@ -42,6 +45,7 @@ body {
 }
 
 .moodForTheDayContainer {
+    padding: 10px 10px 10px 50px;
     display: flex;
     flex-direction: column;
     border: none;
@@ -53,6 +57,7 @@ body {
 }
 
 .submitButtonContainer {
+    padding: 20px 0px 0px 0px;
     display: flex;
     justify-content: center;
 }

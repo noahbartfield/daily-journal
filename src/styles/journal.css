@@ -1,0 +1,19 @@
+.dateContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.conceptsCoveredContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.journalEntryContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.moodForTheDayContainer {
+    display: flex;
+    flex-direction: column;
+}

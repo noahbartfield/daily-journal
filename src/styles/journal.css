@@ -1,19 +1,68 @@
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(248, 247, 237);
+    color: rgb(40, 49, 56);
+}
+
+.headingContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .dateContainer {
     display: flex;
     flex-direction: column;
+    border: none;
+
+}
+
+.dateContainer:hover {
+    background-color: rgb(224, 223, 205);
 }
 
 .conceptsCoveredContainer {
     display: flex;
     flex-direction: column;
+    border: none;
+}
+
+.conceptsCoveredContainer:hover {
+    background-color: rgb(224, 223, 205);
 }
 
 .journalEntryContainer {
     display: flex;
     flex-direction: column;
+    border: none;
+}
+
+.journalEntryContainer:hover {
+    background-color: rgb(224, 223, 205);
 }
 
 .moodForTheDayContainer {
     display: flex;
     flex-direction: column;
+    border: none;
+
+}
+
+.moodForTheDayContainer:hover {
+    background-color: rgb(224, 223, 205);
+}
+
+.submitButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.submitButton {
+
+    background-color: rgb(40, 49, 56);
+    color: rgb(224, 223, 205);
+    border: none;
+    padding: 20px;
+    font-size: .9em;
+    cursor: pointer;
 }

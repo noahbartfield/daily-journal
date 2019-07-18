@@ -6,7 +6,12 @@
 
 
 const journalEntries = [
-
+    {
+        date: "07/18/2019",
+        conceptsCovered: "Printing to DOM",
+        entryContent: "I successfully printed my journal entries to the DOM. It was incredibly confusing for a while, but it feels halfway clicked right now.",
+        mood: "Good"
+    },
     {
         date: "07/12/2019",
         conceptsCovered: "Objects",
@@ -41,9 +46,6 @@ const createJournalEntry = function (date, title, content, mood) {
     `
 }
 
-
-
-
 journalEntries.forEach(entry => {
     let journalEntry = ""
     journalEntry = createJournalEntry(entry.date, entry.conceptsCovered, entry.entryContent, entry.mood)
@@ -52,7 +54,7 @@ journalEntries.forEach(entry => {
 
 
 
-console.log(allEntries)
+// console.log(allEntries)
 
 
 // for (let i = 0; i < journalEntry.length; i++) {

@@ -15,11 +15,15 @@ body {
     display: flex;
     flex-direction: column;
     border: none;
+    transition: 0.4s;
 
 }
 
 .dateContainer:hover {
     background-color: rgb(224, 223, 205);
+    transition: 0.4s;
+    font-size: 1.5em;
+
 }
 
 .conceptsCoveredContainer {
@@ -27,10 +31,16 @@ body {
     display: flex;
     flex-direction: column;
     border: none;
+    transition: 0.4s;
+
 }
 
 .conceptsCoveredContainer:hover {
     background-color: rgb(224, 223, 205);
+    transition: 0.4s;
+    font-size: 1.5em;
+
+
 }
 
 .journalEntryContainer {
@@ -38,10 +48,16 @@ body {
     display: flex;
     flex-direction: column;
     border: none;
+    transition: 0.4s;
+
 }
 
 .journalEntryContainer:hover {
     background-color: rgb(224, 223, 205);
+    transition: 0.4s;
+    font-size: 1.5em;
+
+
 }
 
 .moodForTheDayContainer {
@@ -49,11 +65,17 @@ body {
     display: flex;
     flex-direction: column;
     border: none;
+    transition: 0.4s;
+
 
 }
 
 .moodForTheDayContainer:hover {
     background-color: rgb(224, 223, 205);
+    transition: 0.4s;
+    font-size: 1.5em;
+
+
 }
 
 .submitButtonContainer {
@@ -70,10 +92,32 @@ body {
     padding: 20px;
     font-size: .9em;
     cursor: pointer;
+    transition: 0.4s;
+
+}
+
+.submitButton:hover {
+    padding: 20px 250px 20px 250px;
+    transition: 0.4s;
+}
+
+#entryLog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .journalContainer {
     margin: 10px;
     padding: 10px;
     border: 1px solid rgb(40, 49, 56);
+    flex-basis: 40%;
+    transition: 0.4s;
+
+}
+
+.journalContainer:hover {
+    background-color: rgb(224, 223, 205);
+    flex-basis: 42%;
+    transition: 0.4s;
 }

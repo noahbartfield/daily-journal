@@ -8,10 +8,13 @@ body {
 .headingContainer {
     display: flex;
     justify-content: center;
+    background-color: rgb(40, 49, 56);
+    color: rgb(248, 247, 237);
+    padding: 40px;
 }
 
 .dateContainer {
-    padding: 10px 10px 10px 50px;
+    padding: 20px 10px 20px 50px;
     display: flex;
     flex-direction: column;
     border: none;
@@ -26,8 +29,23 @@ body {
 
 }
 
+.dateTitle {
+    padding: 0px 0px 10px 0px;
+}
+
+.dateInput {
+    background-color: rgb(248, 247, 237);
+    outline: none;
+    border: 1px solid rgb(40, 49, 56);
+
+}
+
+.dateInput:focus {
+    background-color: white;
+}
+
 .conceptsCoveredContainer {
-    padding: 10px 10px 10px 50px;
+    padding: 20px 10px 20px 50px;
     display: flex;
     flex-direction: column;
     border: none;
@@ -43,8 +61,23 @@ body {
 
 }
 
+.conceptsCoveredTitle {
+    padding: 0px 0px 10px 0px;
+}
+
+.titleInput {
+    background-color: rgb(248, 247, 237);
+    outline: none;
+    border: 1px solid rgb(40, 49, 56);
+
+}
+
+.titleInput:focus {
+    background-color: white;
+}
+
 .journalEntryContainer {
-    padding: 10px 10px 10px 50px;
+    padding: 20px 10px 20px 50px;
     display: flex;
     flex-direction: column;
     border: none;
@@ -56,30 +89,54 @@ body {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
     font-size: 1.5em;
+}
 
+.journalEntryTitle {
+    padding: 0px 0px 10px 0px;
+}
 
+.entryTextArea {
+    background-color: rgb(248, 247, 237);
+    outline: none;
+    border: 1px solid rgb(40, 49, 56);
+}
+
+.entryTextArea:focus {
+    background-color: white;
 }
 
 .moodForTheDayContainer {
-    padding: 10px 10px 10px 50px;
+    padding: 20px 10px 20px 50px;
     display: flex;
     flex-direction: column;
     border: none;
     transition: 0.4s;
-
-
 }
 
 .moodForTheDayContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
     font-size: 1.5em;
+}
 
+.moodTitle {
+    padding: 0px 0px 10px 0px;
+}
+
+.moodInput {
+    background-color: rgb(248, 247, 237);
+    border: 1px solid rgb(40, 49, 56);
+    outline: none;
 
 }
 
+.moodInput:focus {
+    background-color: white;
+}
+
+
 .submitButtonContainer {
-    padding: 20px 0px 0px 0px;
+    padding: 20px 0px 20px 0px;
     display: flex;
     justify-content: center;
 }
@@ -101,7 +158,7 @@ body {
     transition: 0.4s;
 }
 
-#entryLog {
+.allEntries {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

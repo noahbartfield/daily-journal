@@ -8,26 +8,26 @@
 const journalEntries = [
     {
         date: "07/18/2019",
-        conceptsCovered: "Printing to DOM",
-        entryContent: "I successfully printed my journal entries to the DOM. It was incredibly confusing for a while, but it feels halfway clicked right now.",
+        title: "Printing to DOM",
+        content: "I successfully printed my journal entries to the DOM. It was incredibly confusing for a while, but it feels halfway clicked right now.",
         mood: "Good"
     },
     {
         date: "07/12/2019",
-        conceptsCovered: "Objects",
-        entryContent: "Today we learned about objects",
+        title: "Objects",
+        content: "Today we learned about objects",
         mood: "Great!"
     },
     {
         date: "07/11/2019",
-        conceptsCovered: "foreach",
-        entryContent: "Today we learned what 'foreach' is. It was great.",
+        title: "foreach",
+        content: "Today we learned what 'foreach' is. It was great.",
         mood: "Good"
     },
     {
         date: "07/09/2019",
-        conceptsCovered: "First Project Presentations",
-        entryContent: "Today we presented our first group projects",
+        title: "First Project Presentations",
+        content: "Today we presented our first group projects",
         mood: "Good"
     }
 ]
@@ -35,22 +35,31 @@ const journalEntries = [
 const allEntries = document.querySelector("#entryLog")
 
 
-const createJournalEntry = function (date, title, content, mood) {
+const createJournalEntry = function (journalEntry) {
     return `
     <section class="journalContainer">
-        <h2>${title}</h2>
-        <p>${content}</p>
-        <p>${date}<p>
-        <h4>Mood: ${mood}</h4>
+        <h2>${journalEntry.title}</h2>
+        <p>${journalEntry.content}</p>
+        <p>${journalEntry.date}<p>
+        <h4>Mood: ${journalEntry.mood}</h4>
     </section>
     `
 }
 
-journalEntries.forEach(entry => {
+for (const entry of journalEntries) {
     let journalEntry = ""
-    journalEntry = createJournalEntry(entry.date, entry.conceptsCovered, entry.entryContent, entry.mood)
+    journalEntry = createJournalEntry(entry)
     allEntries.innerHTML += journalEntry
-});
+}
+
+
+
+
+// journalEntries.forEach(entry => {
+//     let journalEntry = ""
+//     journalEntry = createJournalEntry(entry.date, entry.conceptsCovered, entry.entryContent, entry.mood)
+//     allEntries.innerHTML += journalEntry
+// });
 
 
 

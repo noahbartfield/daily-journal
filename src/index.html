@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Daily Journal</title>
     <link rel="stylesheet" href="styles/journal.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
@@ -16,26 +16,26 @@
 <section class="fieldsContaner"> 
     <form action="">
         <fieldset class="dateContainer">
-            <label for="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" id="journalDate">
+            <label class="dateTitle" for="journalDate">Date of entry</label>
+            <input class="dateInput" type="date" name="journalDate" id="journalDate">
         </fieldset>
     </form>
     <form action="">
         <fieldset class="conceptsCoveredContainer">
-            <label for="conceptsCovered">Concepts Covered</label>
-            <input type="text" name="conceptsCovered" id="conceptsCovered">
+            <label class="conceptsCoveredTitle" for="conceptsCovered">Concepts Covered</label>
+            <input class="titleInput" type="text" name="conceptsCovered" id="conceptsCovered">
         </fieldset>
     </form>
     <form action="">
         <fieldset class="journalEntryContainer">
-            <label for="journalEntry">Journal Entry</label>
-            <textarea name="" id="" cols="20" rows="3"></textarea>
+            <label class="journalEntryTitle" for="journalEntry">Journal Entry</label>
+            <textarea class="entryTextArea" name="" id="" cols="20" rows="3"></textarea>
         </fieldset>
     </form>
     <form action="">
         <fieldset class="moodForTheDayContainer">
-            <label for="moodForTheDay">Mood for the day</label>
-            <select name="moodForTheDay" id="moodForTheDay">
+            <label class="moodTitle" for="moodForTheDay">Mood for the day</label>
+            <select class="moodInput" name="moodForTheDay" id="moodForTheDay">
                 <option value="great">Great!</option>
                 <option value="good">Good</option>
                 <option value="fine">fine</option>
@@ -49,7 +49,7 @@
 <section class="submitButtonContainer">
     <button class="submitButton" type="submit">Record Journal Entry</button>
 </section>
-<article id="entryLog">
+<article class="allEntries" id="entryLog">
 
 </article>
 <script src="scripts/journal.js"></script>

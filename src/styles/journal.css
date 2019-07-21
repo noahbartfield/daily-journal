@@ -45,16 +45,16 @@ body {
   .bar23 {
     width: 35px;
     height: 1px;
-    background-color: rgb(40, 49, 56);
+    background-color: rgb(248, 247, 237);
+    opacity: 0;
     margin: 6px 6px;
     transition: 1s;
   }
   
   /* Rotate first bar */
   .change .bar1 {
-    transform: rotate(-90deg) translate(-97px, -157px) scale(0.3, 1);
+    transform: rotate(-90deg) translate(-96px, -157px) scale(0.3, 1);
     height: 5px;
-    background-color: rgb(248, 247, 237);
   }
   
   /* Fade out the second bar */
@@ -62,16 +62,12 @@ body {
     /* opacity: 0; */
     transform: translate(-150px, 88px) scale(0.5, 1);
     height: 5px;
-    background-color: rgb(248, 247, 237);
-
   }
   
   /* Rotate last bar */
   .change .bar3 {
     transform: rotate(450deg) translate(62px, 142px) ;
     height: 5px;
-    background-color: rgb(248, 247, 237);
-
   }
 
 
@@ -81,25 +77,25 @@ body {
   .change .bar4 {
     height: 5px;
     transform: translate(-100px, 66px) scale(0.6, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar5 {
     height: 5px;
     transform: rotate(90deg) translate(40px, 90px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar6 {
     height: 5px;
     transform: rotate(90deg) translate(29px, 110px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar7 {
     height: 5px;
     transform: rotate(540deg) translate(100px, -3px) scale(0.6, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
 
@@ -108,19 +104,19 @@ body {
   .change .bar8 {
     height: 5px;
     transform: translate(-50px, 22px) scale(0.6, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar9 {
     height: 5px;
     transform: rotate(90deg) translate(-4px, 40px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar10 {
     height: 5px;
     transform: rotate(90deg) translate(-15px, 58px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
 
@@ -130,31 +126,31 @@ body {
   .change .bar11 {
     height: 5px;
     transform: translate(0px, -40px) scale(0.6, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar12 {
     height: 5px;
     transform: rotate(90deg) translate(-46px, -10px) scale(0.4, 1);
-    background-color: rgb(248, 247, 237); 
+    opacity: 1;
   }
 
   .change .bar13 {
     height: 5px;
     transform: rotate(90deg) translate(-47px, 8px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar14 {
     height: 5px;
     transform: translate(2px, -59px) scale(0.6, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar15 {
     height: 5px;
     transform: rotate(60deg) translate(-52px, -35px) scale(0.6, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
 
@@ -165,19 +161,19 @@ body {
   .change .bar16 {
     height: 5px;
     transform: rotate(420deg) translate(-45px, -82px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar17 {
     height: 5px;
     transform: rotate(90deg) translate(-91px, -40px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar18 {
     height: 5px;
     transform: rotate(90deg) translate(-102px, -58px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
 
@@ -191,19 +187,19 @@ body {
   .change .bar19 {
     height: 5px;
     transform: translate(102px, -110px) scale(0.6, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar20 {
     height: 5px;
     transform: rotate(-60deg) translate(152px, 20px) scale(1, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
   .change .bar21 {
     height: 5px;
     transform: rotate(60deg) translate(-60px, -162px) scale(1, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
 
@@ -214,13 +210,13 @@ body {
   .change .bar22 {
     height: 5px;
     transform: translate(160px, -131px) scale(0.6, 1); 
-    background-color: rgb(248, 247, 237);
-  }
+    opacity: 1;
+}
 
   .change .bar23 {
     height: 5px;
     transform: rotate(450deg) translate(-157px, -150px); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
 
@@ -229,13 +225,16 @@ body {
   .change .bar121 {
     height: 5px;
     transform: translateY(-80px) scale(20, 1); 
-    background-color: rgb(248, 247, 237);
+    opacity: 1;
   }
 
 
+
+
+
 .disappear {
-    opacity: 0;
-    transition: 0.4s;
+    opacity: 1;
+    transition: 1s;
     transform: scale(.00001);
 } 
 
@@ -245,7 +244,7 @@ body {
 
 
 .fieldsContainer {
-    transition: 0.4s;
+    transition: 1s;
 }
 
 .headingContainer {

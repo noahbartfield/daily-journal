@@ -6,14 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daily Journal</title>
     <link rel="stylesheet" href="styles/journal.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <section class="headingContainer">
-        <h1>Daily Journal</h1>
+        <!-- <h1  class="heading">Daily Journal</h1> -->
+        <section class="threeBarContainer" onclick="lineChanger(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </section>
     </section>
-    
-<section class="fieldsContaner"> 
+
+<section class="fieldsContainer disappear"> 
     <form action="">
         <fieldset class="dateContainer">
             <label class="dateTitle" for="journalDate">Date of entry</label>

@@ -53,7 +53,17 @@ for (const entry of journalEntries) {
 }
 
 
+// changes shape of three lines to x
+function lineChanger(x) {
+    x.classList.toggle("change")
+}
 
+const makeDateDisappear = document.querySelector(".fieldsContainer")
+const threeButtonClicker = document.querySelector(".threeBarContainer")
+
+threeButtonClicker.addEventListener('click', function() {
+    makeDateDisappear.classList.toggle("disappear")
+})
 
 // journalEntries.forEach(entry => {
 //     let journalEntry = ""

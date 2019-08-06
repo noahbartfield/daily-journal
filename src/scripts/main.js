@@ -33,7 +33,7 @@ console.log('data: ', data);
 
 API.entryFetcher().then(arrayOfEntries => {
     sessionStorage.setItem("journalEntries", JSON.stringify(arrayOfEntries))
-    render.displayEntryInDOM(data)
+    render.displayEntryInDOM(arrayOfEntries)
 })
 
 

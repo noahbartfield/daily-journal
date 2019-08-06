@@ -5,35 +5,50 @@
 
 
 
-const journalEntries = [
-    {
-        date: "07/18/2019",
-        title: "Printing to DOM",
-        content: "I successfully printed my journal entries to the DOM. It was incredibly confusing for a while, but it feels halfway clicked right now.",
-        mood: "Good"
-    },
-    {
-        date: "07/12/2019",
-        title: "Objects",
-        content: "Today we learned about objects",
-        mood: "Great!"
-    },
-    {
-        date: "07/11/2019",
-        title: "foreach",
-        content: "Today we learned what 'foreach' is. It was great.",
-        mood: "Good"
-    },
-    {
-        date: "07/09/2019",
-        title: "First Project Presentations",
-        content: "Today we presented our first group projects",
-        mood: "Good"
-    }
-]
+// const journalEntries = [
+//     {
+//         date: "07/18/2019",
+//         title: "Printing to DOM",
+//         content: "I successfully printed my journal entries to the DOM. It was incredibly confusing for a while, but it feels halfway clicked right now.",
+//         mood: "Good"
+//     },
+//     {
+//         date: "07/12/2019",
+//         title: "Objects",
+//         content: "Today we learned about objects",
+//         mood: "Great!"
+//     },
+//     {
+//         date: "07/11/2019",
+//         title: "foreach",
+//         content: "Today we learned what 'foreach' is. It was great.",
+//         mood: "Good"
+//     },
+//     {
+//         date: "07/09/2019",
+//         title: "First Project Presentations",
+//         content: "Today we presented our first group projects",
+//         mood: "Good"
+//     }
+// ]
+
+
+// **************************
+
 
 const allEntries = document.querySelector("#entryLog")
 
+const entryFetcher = () => {
+    fetch("http://localhost:3000/entries")
+        .then(data => data.json())
+        .then(arrayOfEntries => {
+            arrayOfEntries.forEach(entry => {
+                displayEntryInDOM(entry)
+            });
+        })
+}
+
+entryFetcher()
 
 const createJournalEntry = function (journalEntry) {
     return `
@@ -46,24 +61,58 @@ const createJournalEntry = function (journalEntry) {
     `
 }
 
-for (const entry of journalEntries) {
+const displayEntryInDOM = (entry) => {
     let journalEntry = ""
     journalEntry = createJournalEntry(entry)
-    allEntries.innerHTML += journalEntry
+    allEntries.innerHTML += journalEntry 
 }
 
-
-// changes shape of three lines to x
 function lineChanger(x) {
     x.classList.toggle("change")
 }
 
-const makeDateDisappear = document.querySelector(".fieldsContainer")
+const makeDisappear = document.querySelector(".fieldsContainer")
 const threeButtonClicker = document.querySelector(".threeBarContainer")
 
-threeButtonClicker.addEventListener('click', function() {
-    makeDateDisappear.classList.toggle("disappear")
+threeButtonClicker.addEventListener('click', () => {
+    makeDisappear.classList.toggle("disappear")
 })
+
+
+
+
+
+
+// ***********************
+
+
+
+
+
+
+
+
+// for (const entry of journalEntries) {
+//     let journalEntry = ""
+//     journalEntry = createJournalEntry(entry)
+//     allEntries.innerHTML += journalEntry
+// }
+
+
+
+// changes shape of three lines to x
+
+// const enlargeEntry = document.querySelector(".journalContainer")
+
+// enlargeEntry.addEventListener('click', () => {
+//     enlargeEntry.classList.toggle("enlargeEntry")
+// })
+
+
+
+
+
+
 
 // journalEntries.forEach(entry => {
 //     let journalEntry = ""

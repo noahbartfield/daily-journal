@@ -12,7 +12,7 @@
 
     <section class="headingContainer">
         <!-- <h1  class="heading">Daily Journal</h1> -->
-        <section class="threeBarContainer" onclick="lineChanger(this)">
+        <section class="threeBarContainer">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -50,36 +50,55 @@
     <form action="">
         <fieldset class="conceptsCoveredContainer">
             <label class="conceptsCoveredTitle" for="conceptsCovered">Concepts Covered</label>
-            <input class="titleInput" type="text" name="conceptsCovered" id="conceptsCovered">
+            <input class="titleInput" type="text" name="conceptsCovered" id="conceptsCovered" maxlength="15">
         </fieldset>
     </form>
     <form action="">
         <fieldset class="journalEntryContainer">
             <label class="journalEntryTitle" for="journalEntry">Journal Entry</label>
-            <textarea class="entryTextArea" name="" id="" cols="20" rows="3"></textarea>
+            <textarea class="entryTextArea" cols="20" rows="3" maxlength="150"></textarea>
         </fieldset>
     </form>
     <form action="">
         <fieldset class="moodForTheDayContainer">
             <label class="moodTitle" for="moodForTheDay">Mood for the day</label>
             <select class="moodInput" name="moodForTheDay" id="moodForTheDay">
-                <option value="great">Great!</option>
-                <option value="good">Good</option>
+                <option value="Great!">Great!</option>
+                <option value="Good">Good</option>
                 <option value="fine">fine</option>
-                <option value="notGood">not good</option>
+                <option value="not good">not good</option>
                 <option value="bad">bad</option>
                 <option value="awful">awful</option>
             </select>
         </fieldset>
     </form>
+
     <section class="submitButtonContainer">
         <button class="submitButton" type="submit">Record Journal Entry</button>
     </section>
 </section>
 
+<form action="">
+        <fieldset id="radioButton">
+            <legend>Display A Certain Mood</legend>
+            <input type="radio" name="mood" id="allRadio" value="All">
+            <label for="All">All</label>
+            <input type="radio" name="mood" id="greatRadio" value="Great!">
+            <label for="Great!">Great!</label>
+            <input type="radio" name="mood" id="goodRadio" value="Good">
+            <label for="Good">Good</label>
+            <input type="radio" name="mood" id="fineRadio" value="fine">
+            <label for="fine">fine</label>
+            <input type="radio" name="mood" id="notGoodRadio" value="not good">
+            <label for="not good">not good</label>
+            <input type="radio" name="mood" id="awfulRadio" value="awful">
+            <label for="awful">awful</label>
+        </fieldset>
+    </form>
 <article class="allEntries" id="entryLog">
 
 </article>
-<script src="scripts/journal.js"></script>
+
+<script type="module" src="scripts/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,67 @@
+{
+  "entries": [
+    {
+      "date": "07/18/2019",
+      "title": "Printing to DOM",
+      "content": "I successfully printed my journal entries to the DOM. It was incredibly confusing for a while, but it feels halfway clicked right now.",
+      "mood": "Good",
+      "id": 4
+    },
+    {
+      "date": "07/12/2019",
+      "title": "Objects",
+      "content": "Today we learned about objects",
+      "mood": "Great!",
+      "id": 3
+    },
+    {
+      "date": "07/11/2019",
+      "title": "foreach",
+      "content": "Today we learned what 'foreach' is. It was great.",
+      "mood": "Good",
+      "id": 2
+    },
+    {
+      "date": "07/09/2019",
+      "title": "First Project Presentations",
+      "content": "Today we presented our first group projects",
+      "mood": "Good",
+      "id": 1
+    },
+    {
+      "date": "2019-08-05",
+      "title": "ES6 Modules",
+      "content": "We learned about ES6 modules. How to export and import functionality while keeping certain things private from the rest of the js files.",
+      "mood": "Great!",
+      "id": 6
+    },
+    {
+      "date": "2019-08-06",
+      "title": "I Feel Great!",
+      "content": "I feel fine today",
+      "mood": "not good",
+      "id": 7
+    },
+    {
+      "date": "2019-08-06",
+      "title": "Testing Fine",
+      "content": "I feel fine right now",
+      "mood": "fine",
+      "id": 8
+    },
+    {
+      "date": "2019-08-06",
+      "title": "I feel not good",
+      "content": "Not feeling great at all",
+      "mood": "not good",
+      "id": 9
+    },
+    {
+      "date": "2019-08-06",
+      "title": "Bad Bad Bad",
+      "content": "I feel horrible",
+      "mood": "awful",
+      "id": 10
+    }
+  ]
+}

@@ -51,20 +51,20 @@ body {
     transition: 1s;
   }
   
-  /* Rotate first bar */
+
+  
+  /* the letter "j" */
   .change .bar1 {
     transform: rotate(-90deg) translate(-96px, -157px) scale(0.3, 1);
     height: 5px;
   }
   
-  /* Fade out the second bar */
   .change .bar2 {
     /* opacity: 0; */
     transform: translate(-150px, 88px) scale(0.5, 1);
     height: 5px;
   }
   
-  /* Rotate last bar */
   .change .bar3 {
     transform: rotate(450deg) translate(62px, 142px) ;
     height: 5px;
@@ -233,7 +233,7 @@ body {
 
 
 .disappear {
-    opacity: 1;
+    opacity: 0;
     transition: 1s;
     transform: scale(.00001);
 } 
@@ -251,8 +251,8 @@ body {
     display: flex;
     justify-content: center;
     background-color: rgb(40, 49, 56);
-    color: rgb(248, 247, 237);
-    padding: 40px;
+    color: rgb(172, 169, 142);
+    padding: 40px 0px 0px 0px;
 }
 
 .dateContainer {
@@ -267,7 +267,7 @@ body {
 .dateContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
-    /* font-size: 1.3em; */
+    font-size: 1.3em;
     margin: 0px;
 
 }
@@ -299,7 +299,7 @@ body {
 .conceptsCoveredContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
-    /* font-size: 1.3em; */
+    font-size: 1.3em;
     margin: 0px;
 
 }
@@ -331,7 +331,7 @@ body {
 .journalEntryContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
-    /* font-size: 1.3em; */
+    font-size: 1.3em;
     margin: 0px;
 }
 
@@ -360,7 +360,7 @@ body {
 .moodForTheDayContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
-    /* font-size: 1.3em; */
+    font-size: 1.3em;
     margin: 0px;
 }
 
@@ -407,19 +407,35 @@ body {
     flex-wrap: wrap;
 }
 
+
+
+
 .journalContainer {
     margin: 10px;
     padding: 10px;
     border: 1px solid rgb(40, 49, 56);
+    border-radius: 3px;
     flex-basis: 40%;
     transition: 0.4s;
-
-
 }
 
-.journalContainer:hover {
-    background-color: rgb(224, 223, 205);
-    flex-basis: 42%;
-    transition: 0.4s;
+.enlargeEntry {
+    flex-basis: 90%;
+}
 
+
+.journalContainer:hover {
+    background-color: rgb(40, 49, 56);
+    flex-basis: 42%;
+    transition: 1s;
+    color: rgb(224, 223, 205);
+}
+
+.deleteButton {
+  background-color: rgb(40, 49, 56);
+  color: rgb(224, 223, 205);
+  border: 1px solid rgb(224, 223, 205);
+  font-size: 20px;
+  cursor: pointer;
+  
 }

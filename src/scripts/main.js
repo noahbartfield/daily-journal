@@ -20,32 +20,19 @@ const notGoodRadio = document.querySelector("#notGoodRadio")
 const awfulRadio = document.querySelector("#awfulRadio")
 
 
-// API.entryFetcher().then(arrayOfEntries => {
-//     arrayOfEntries.forEach(entry => {
-//         const entryInDom = factoryFunctions.createJournalEntry(entry)
-//         render.displayEntryInDOM(entryInDom)
-//     });
-// })
 
+let data = []
 
-let data = JSON.parse(sessionStorage.getItem("journalEntries"))
-console.log('data: ', data);
 
 API.entryFetcher().then(arrayOfEntries => {
-    sessionStorage.setItem("journalEntries", JSON.stringify(arrayOfEntries))
+    // sessionStorage.setItem("journalEntries", JSON.stringify(arrayOfEntries))
+    data.push(arrayOfEntries)
     render.displayEntryInDOM(arrayOfEntries)
 })
 
-
 submitButton.addEventListener("click", () => {
     const newJournalEntry = factoryFunctions.createNewJournalEntry(dateField.value, conceptsCoveredField.value, entryAreaField.value, moodField.value)
-    // const newHTMLRep = factoryFunctions.createJournalEntry(newJournalEntry)
-    // render.displayEntryInDOM(newHTMLRep)
-    // const regularExpression = /\w/
     const regularExpression = new RegExp(/^[a-z0-9(){}:;., ]+$/i)
-
-
-
     // if (dateField.value === "") {
     //     window.alert("Must complete all fields")
     // } else if (regularExpression.test(conceptsCoveredField.value) === false) {
@@ -57,8 +44,10 @@ submitButton.addEventListener("click", () => {
     // } else {
         API.entryPost(newJournalEntry).then(() => {
             API.entryFetcher().then(arrayOfEntries => {
-                // sessionStorage.setItem("journalEntries", JSON.stringify(arrayOfEntries))
+                data = []
+                data.push(arrayOfEntries)
                 render.displayEntryInDOM(arrayOfEntries)
+                console.log(data)
             })
         })
     // }
@@ -74,6 +63,8 @@ allEntries.addEventListener("click", event => {
         API.deleteEntry(journalID)
             .then(API.entryFetcher)
             .then(render.displayEntryInDOM)
+            const targetedIndex = data[0].indexOf(journalID)
+            data[0].splice(targetedIndex, 1)
     }
 })
 
@@ -81,12 +72,15 @@ radioButton.addEventListener("click", event => {
     if (event.target.name === "mood") {
         const mood = event.target.value
         if (mood === "All") {
-            API.entryFetcher().then(render.displayEntryInDOM)
+            render.displayEntryInDOM(data[0])
+            // API.entryFetcher().then(render.displayEntryInDOM)
         } else {
-        API.radioFetch(mood).then(render.displayEntryInDOM)
+        render.displayEntryInDOM(data[0].filter(object => object.mood === mood))
+        // API.radioFetch(mood).then(render.displayEntryInDOM)
         }
     }
 })
+
 
 
 const makeDisappear = document.querySelector(".fieldsContainer")

@@ -20,8 +20,12 @@ entryPost (newJournalEntry) {
     // .then(data => data.json())  
 },
 
-radioFetch (mood) {
-    return fetch(`http://localhost:3000/entries?mood=${mood}`)
+// radioFetch (mood) {
+//     return fetch(`http://localhost:3000/entries?mood=${mood}`)
+//         .then(data => data.json())
+// },
+searchFetch (value) {
+    return fetch(`http://localhost:3000/entries?q=${value}`)
         .then(data => data.json())
 },
 
@@ -32,6 +36,16 @@ deleteEntry (entryID) {
     }
     ) 
     .then(data => data.json())
+},
+editEntry (entryID, updatedObject) {
+    return fetch(`http://localhost:3000/entries/${entryID}`, {
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(updatedObject)
+})
+.then(data => data.json())
 }
 }
 

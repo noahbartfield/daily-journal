@@ -1,28 +1,28 @@
 {
   "entries": [
     {
-      "date": "07/18/2019",
+      "date": "2019-07-18",
       "title": "Printing to DOM",
       "content": "I successfully printed my journal entries to the DOM. It was incredibly confusing for a while, but it feels halfway clicked right now.",
       "mood": "Good",
       "id": 4
     },
     {
-      "date": "07/12/2019",
+      "date": "2019-07-12",
       "title": "Objects",
       "content": "Today we learned about objects",
       "mood": "Great!",
       "id": 3
     },
     {
-      "date": "07/11/2019",
+      "date": "2019-07-11",
       "title": "foreach",
       "content": "Today we learned what 'foreach' is. It was great.",
       "mood": "Good",
       "id": 2
     },
     {
-      "date": "07/09/2019",
+      "date": "2019-07-09",
       "title": "First Project Presentations",
       "content": "Today we presented our first group projects",
       "mood": "Good",

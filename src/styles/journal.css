@@ -228,14 +228,29 @@ body {
     opacity: 1;
   }
 
+.dailyJournalTitleContainer {
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+}
 
+.dailyJournalTitle {
+  font-size: 10em;
+  transition: 1s;
+  margin-bottom: 0px;
+  /* text-align: center; */
+}
 
-
+.minimizeFontSize {
+  font-size: .0001em;
+  transition: 1s;
+}
 
 .disappear {
     opacity: 0;
     transition: 1s;
     transform: scale(.00001);
+    height: 50px;
 } 
 
 
@@ -267,7 +282,7 @@ body {
 .dateContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
     margin: 0px;
 
 }
@@ -299,7 +314,7 @@ body {
 .conceptsCoveredContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
     margin: 0px;
 
 }
@@ -331,7 +346,7 @@ body {
 .journalEntryContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
     margin: 0px;
 }
 
@@ -360,7 +375,7 @@ body {
 .moodForTheDayContainer:hover {
     background-color: rgb(224, 223, 205);
     transition: 0.4s;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
     margin: 0px;
 }
 
@@ -401,13 +416,25 @@ body {
     transition: 0.4s;
 }
 
+.turnRed {
+  background-color: rgb(161, 40, 40);
+}
+
 .allEntries {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+.radioContainer {
+  display: flex;
+  justify-content: center;
+}
 
+#radioButton {
+  max-width: 50%;
+
+}
 
 
 .journalContainer {
@@ -435,7 +462,15 @@ body {
   background-color: rgb(40, 49, 56);
   color: rgb(224, 223, 205);
   border: 1px solid rgb(224, 223, 205);
-  font-size: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+.editButton {
+  background-color:rgb(161, 40, 40);
+  color: rgb(224, 223, 205);
+  border: 1px solid rgb(224, 223, 205);
+  font-size: 16px;
   cursor: pointer;
   
 }

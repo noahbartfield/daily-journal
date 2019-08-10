@@ -9,6 +9,8 @@ createJournalEntry (journalEntry) {
         <p>${journalEntry.date}<p>
         <h4>Mood: ${journalEntry.mood}</h4>
         <button class="deleteButton" id="deleteEntry--${journalEntry.id}">Delete</button>
+        <button class="editButton" id="editEntry--${journalEntry.id}">Edit</button>
+
     </section>
     `
 },

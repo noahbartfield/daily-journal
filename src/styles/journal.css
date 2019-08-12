@@ -433,7 +433,19 @@ body {
 
 #radioButton {
   max-width: 50%;
+}
 
+#searchContainer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+#searchEntries {
+  border: 1px solid rgb(40, 49, 56);
+  outline: none;
+  margin-left: 10px;
 }
 
 

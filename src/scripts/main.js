@@ -42,21 +42,21 @@ API.entryFetcher().then(arrayOfEntries => {
 
 submitButton.addEventListener("click", () => {
     const newJournalEntry = factoryFunctions.createNewJournalEntry(dateField.value, conceptsCoveredField.value, entryAreaField.value, moodField.value)
-    const regularExpression = new RegExp(/^[a-z0-9(){}:;., ]+$/i)
-    const regularCurseWords = new RegExp(/^shit/i)
-    if (dateField.value === "") {
-        window.alert("Must complete all fields")
-    } else if (regularExpression.test(conceptsCoveredField.value) === false) {
-        window.alert("Must complete all fields")
-    } else if (regularCurseWords.test(conceptsCoveredField.value) === true) {
-        window.alert("Sorry, this journal doesn't tolerate curse words")
-    } else if (regularCurseWords.test(entryAreaField.value) === true) {
-        window.alert("Sorry, this journal doesn't tolerate curse words")
-    } else if (regularExpression.test(entryAreaField.value) === false) {
-        window.alert("Must complete all fields")
-    } else if (moodField.value === "") {
-        window.alert("Must complete all fields")
-    } else {
+    // const regularExpression = new RegExp(/^[a-z0-9(){}:;., ]+$/i)
+    // const regularCurseWords = new RegExp(/^shit/i)
+    // if (dateField.value === "") {
+    //     window.alert("Must complete all fields")
+    // } else if (regularExpression.test(conceptsCoveredField.value) === false) {
+    //     window.alert("Must complete all fields")
+    // } else if (regularCurseWords.test(conceptsCoveredField.value) === true) {
+    //     window.alert("Sorry, this journal doesn't tolerate curse words")
+    // } else if (regularCurseWords.test(entryAreaField.value) === true) {
+    //     window.alert("Sorry, this journal doesn't tolerate curse words")
+    // } else if (regularExpression.test(entryAreaField.value) === false) {
+    //     window.alert("Must complete all fields")
+    // } else if (moodField.value === "") {
+    //     window.alert("Must complete all fields")
+    // } else {
         if (hiddenField.value !== "") {
             API.editEntry(hiddenField.value, newJournalEntry)
             .then(() => {
@@ -87,9 +87,10 @@ submitButton.addEventListener("click", () => {
         }
     submitButton.classList.remove("turnRed")
     submitButton.innerHTML = "Record Journal Entry"
-    }
+    // }
 })
 
+// edit functionality
 const populateFormsToEdit = (entryID) => {
     fetch(`http://localhost:3000/entries/${entryID}`)
     .then(data => data.json())
@@ -104,6 +105,7 @@ const populateFormsToEdit = (entryID) => {
     })
 }
 
+// edit event listener
 allEntries.addEventListener("click", event => {
     if(event.target.id.startsWith("editEntry")) {
         const journalID = event.target.id.split("--")[1]
@@ -111,7 +113,7 @@ allEntries.addEventListener("click", event => {
     }
 })
 
-
+// delete functionality
 allEntries.addEventListener("click", event => {
     if(event.target.id.startsWith("deleteEntry")) {
         const journalID = event.target.id.split("--")[1]
@@ -123,6 +125,7 @@ allEntries.addEventListener("click", event => {
     }
 })
 
+// radio functionality
 radioButton.addEventListener("click", event => {
     if (event.target.name === "mood") {
         const mood = event.target.value
@@ -142,10 +145,15 @@ radioButton.addEventListener("click", event => {
 
 
 
-searchEntries.addEventListener("keypress", () => {
+searchEntries.addEventListener("keyup", () => {
     allEntries.innerHTML = ""
-    API.searchFetch(searchEntries.value).then(render.displayEntryInDOM)
+    // API.searchFetch(searchEntries.value).then(render.displayEntryInDOM)
+
+    const filteredArray = data[0].filter(entry => (entry.title.includes(searchEntries.value) || entry.content.includes(searchEntries.value) || entry.date.includes(searchEntries.value) || entry.mood.includes(searchEntries.value)))
+    render.displayEntryInDOM(filteredArray)
 })
+
+
 
 
 
